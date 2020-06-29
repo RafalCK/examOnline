@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+.ui-button-icon-right {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em !important;
+  right: 0.4em !important;
+}
+
+body {
+  background-image: url("app/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+.ui-float-label > label {
+  color: #3d99e0 !important;
+}

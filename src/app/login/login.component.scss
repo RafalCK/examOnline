@@ -1,0 +1,45 @@
+.wrapper {
+  @extend .dflex;
+}
+
+.login__border {
+  @extend .dflex;
+  border: 2px solid white;
+  width: 33%;
+  flex-direction: column;
+}
+
+.login__button {
+  margin-bottom: 0.7em;
+}
+
+.login__header {
+  margin-top: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  &:after {
+    border-bottom: 3px solid #007ad9;
+    display: inline-block;
+    content: "Witamy na platformie z egzaminami online";
+  }
+}
+
+.login__input {
+  margin-top: 1em;
+  width: 80%;
+  &:nth-child(2) {
+    margin-bottom: 1em;
+  }
+}
+
+.dflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}

@@ -1,0 +1,35 @@
+<h1 class="login__header"></h1>
+<div class="wrapper">
+  <div class="login__border">
+    <div class="login__input">
+      <span class="ui-float-label">
+        <input
+          (change)="inputName($event)"
+          style="width: 100%;"
+          type="text"
+          size="30"
+          pInputText
+        />
+        <label for="float-input">Imię</label>
+      </span>
+    </div>
+    <div class="login__input">
+      <span class="ui-float-label">
+        <input
+          (change)="inputName($event)"
+          style="width: 100%;"
+          type="text"
+          size="30"
+          pInputText
+        />
+        <label for="float-input">Nazwisko</label>
+      </span>
+    </div>
+    <p-button
+      class="login__button"
+      icon="pi pi-arrow-right"
+      iconPos="right"
+      label="Przejdz do egzaminu"
+    ></p-button>
+  </div>
+</div>
