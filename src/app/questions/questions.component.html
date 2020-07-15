@@ -1,0 +1,6 @@
+<div *ngFor="let question of questionsList; let i = index">
+  <p-accordionTab header="{{ question.header }} {{ i + 1 }}">
+    <p style="font-weight: 900;">Pytanie: {{ question.question }} ?</p>
+    <p>Odpowiedź: {{ question.answer }}</p>
+  </p-accordionTab>
+</div>

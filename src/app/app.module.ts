@@ -5,14 +5,33 @@ import { InputTextModule } from "primeng/inputtext";
 import { CardModule } from "primeng/card";
 import { ButtonModule } from "primeng/button";
 import { AccordionModule } from "primeng/accordion";
+import { RadioButtonModule } from "primeng/radiobutton";
+import { CheckboxModule } from "primeng/checkbox";
 
 import { AppComponent } from "./app.component";
-import { EgzaminComponent } from "./egzamin/egzamin.component";
-import { PytanieComponent } from "./pytanie/pytanie.component";
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from "./login/login.component";
+import { AppRoutingModule } from "./app-routing.module";
+import { ExamCardComponent } from "./exam-card/exam-card.component";
+import { FormsModule } from "@angular/forms";
+import { QuestionsComponent } from "./questions/questions.component";
+import { QuestionOpenComponent } from "./question-open/question-open.component";
+import { QuestionChoiceComponent } from "./question-choice/question-choice.component";
+import { QuestionMultiComponent } from "./question-multi/question-multi.component";
+import { QuestionsBoardComponent } from "./questions-board/questions-board.component";
+import { ExamComponent } from "./exam/exam.component";
 
 @NgModule({
-  declarations: [AppComponent, EgzaminComponent, PytanieComponent, LoginComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    ExamCardComponent,
+    QuestionsComponent,
+    QuestionOpenComponent,
+    QuestionChoiceComponent,
+    QuestionMultiComponent,
+    QuestionsBoardComponent,
+    ExamComponent,
+  ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -20,6 +39,10 @@ import { LoginComponent } from './login/login.component';
     CardModule,
     ButtonModule,
     AccordionModule,
+    AppRoutingModule,
+    RadioButtonModule,
+    CheckboxModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

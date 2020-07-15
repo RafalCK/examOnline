@@ -1,0 +1,28 @@
+<div class="subject__card">
+  <div class="card__inner">
+    <div class="card__front">
+      <img
+        src="{{ srcImg }}"
+        alt="Avatar"
+        style="width: 300px; height: 150px;"
+      />
+    </div>
+    <div class="card__back">
+      <img
+        src="{{ srcImg }}"
+        alt="Avatar"
+        style="width: 300px; height: 150px;"
+      />
+      <h1>{{ header }}</h1>
+      <button
+        pButton
+        (click)="goToExam()"
+        style="width: 60%;"
+        type="button"
+        label="Przejdź do egzaminu"
+        class="ui-button-secondary"
+      ></button>
+      <p>Zdobyte punkty: {{ recivePoints }}/{{ maxPoints }}</p>
+    </div>
+  </div>
+</div>

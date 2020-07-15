@@ -1,0 +1,35 @@
+.question__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.exam__user {
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+  p {
+    font-size: 1em;
+    color: white;
+  }
+}
+
+.subject__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  align-content: center;
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  &:after {
+    border-bottom: 3px solid #007ad9;
+    display: inline-block;
+    content: "Egzamin";
+  }
+}
+.question__content {
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}

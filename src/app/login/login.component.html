@@ -16,7 +16,7 @@
     <div class="login__input">
       <span class="ui-float-label">
         <input
-          (change)="inputName($event)"
+          (change)="inputSurename($event)"
           style="width: 100%;"
           type="text"
           size="30"
@@ -26,6 +26,7 @@
       </span>
     </div>
     <p-button
+      (click)="zaloguj()"
       class="login__button"
       icon="pi pi-arrow-right"
       iconPos="right"

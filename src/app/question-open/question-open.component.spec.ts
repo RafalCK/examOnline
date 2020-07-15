@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PytanieComponent } from './pytanie.component';
+import { QuestionOpenComponent } from './question-open.component';
 
-describe('PytanieComponent', () => {
-  let component: PytanieComponent;
-  let fixture: ComponentFixture<PytanieComponent>;
+describe('QuestionOpenComponent', () => {
+  let component: QuestionOpenComponent;
+  let fixture: ComponentFixture<QuestionOpenComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PytanieComponent ]
+      declarations: [ QuestionOpenComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PytanieComponent);
+    fixture = TestBed.createComponent(QuestionOpenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
