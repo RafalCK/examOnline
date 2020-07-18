@@ -8,23 +8,22 @@ import { Router } from "@angular/router";
 })
 export class LoginComponent implements OnInit {
   name: string;
-  surename: string;
+  surname: string;
   localname: string;
-  localsurename: string;
+  localsurname: string;
 
   inputName(event: any) {
     this.name = event.srcElement.value;
     localStorage.setItem(`name`, `${this.name}`);
   }
-  inputSurename(event: any) {
-    this.surename = event.srcElement.value;
-    localStorage.setItem(`surename`, `${this.surename}`);
+  inputSurname(event: any) {
+    this.surname = event.srcElement.value;
+    localStorage.setItem(`surname`, `${this.surname}`);
   }
 
   zaloguj() {
     this.route.navigate(["/egzamin"]);
   }
-
   constructor(private route: Router) {}
 
   ngOnInit() {}

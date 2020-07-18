@@ -15,3 +15,20 @@ export class QuestionsBoardComponent implements OnInit {
 
   ngOnInit() {}
 }
+
+interface Question {
+  question: string;
+  type: string;
+}
+
+interface QuestionOpen extends Question {
+  anserw: string;
+}
+
+interface QuestionChoice extends Question {
+  anserwValue: string;
+}
+
+interface QuestionMulti extends Question {
+  anserwValue: string[];
+}
