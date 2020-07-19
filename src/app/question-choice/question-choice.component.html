@@ -1,43 +1,32 @@
-<p-accordionTab header="Pytanie 2">
-  <p class="question__content">
-    Jakie jest prawidłowe rozwinięcie skrótu HTML ?
-  </p>
-  <div class="p-grid" style="width: 250px; margin-bottom: 10px;">
+<div class="p-grid">
+  <div class="p-col-12">
     <div class="p-col-12">
       <p-radioButton
-        name="group1"
-        value="Option 1"
-        label="Hyperlink Markup Language"
+        value="{{ value1 }}"
+        label="{{ label1 }}"
         [(ngModel)]="selectedValue"
-        inputId="opt1"
       ></p-radioButton>
     </div>
     <div class="p-col-12">
       <p-radioButton
-        name="group1"
-        value="Option 2"
-        label="Hypertext Markup Language"
+        value="{{ value2 }}"
+        label="{{ label2 }}"
         [(ngModel)]="selectedValue"
-        inputId="opt2"
       ></p-radioButton>
     </div>
     <div class="p-col-12">
       <p-radioButton
-        name="group1"
-        value="Option 3"
-        label="Hypertext Markup Links"
+        value="{{ value3 }}"
+        label="{{ label3 }}"
         [(ngModel)]="selectedValue"
-        inputId="opt3"
       ></p-radioButton>
     </div>
     <div class="p-col-12">
       <p-radioButton
-        name="group1"
-        value="Option 3"
-        label="Hierarchical Mark Language"
+        value="{{ value4 }}"
+        label="{{ label4 }}"
         [(ngModel)]="selectedValue"
-        inputId="opt3"
       ></p-radioButton>
     </div>
   </div>
-</p-accordionTab>
+</div>

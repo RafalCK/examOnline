@@ -8,8 +8,26 @@ import { Component, OnInit } from "@angular/core";
 export class QuestionsBoardComponent implements OnInit {
   name = localStorage.getItem(`name`);
   surename = localStorage.getItem(`surename`);
-  selectedValue: string;
-  selectedCities: string[] = [];
+  answer: string;
+  correctAnswer: string;
+  toast: string;
+  messageToSendP: string = "";
+
+  endExam() {
+    this.checkAnswers();
+  }
+
+  sendToChild(message: string) {
+    this.messageToSendP = message;
+  }
+
+  checkAnswers() {
+    if (this.answer === this.correctAnswer) {
+      this.toast = "Prawidłowa odpowiedz, brawo zdobywasz punkt";
+    } else {
+      this.toast = "Nieprawidłowa odpowiedz";
+    }
+  }
 
   constructor() {}
 

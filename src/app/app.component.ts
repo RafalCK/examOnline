@@ -6,7 +6,6 @@ import { Router } from "@angular/router";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  param = "";
   name = localStorage.getItem(`name`);
   surname = localStorage.getItem(`surname`);
 

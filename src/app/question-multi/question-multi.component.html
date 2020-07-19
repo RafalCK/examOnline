@@ -1,43 +1,30 @@
-<p-accordionTab header="Pytanie 3">
-  <p class="question__content">
-    Jakie są istiejące typy pamięci RAM ?
-  </p>
-  <div class="p-grid" style="width: 250px; margin-bottom: 10px;">
-    <div class="p-col-12">
-      <p-checkbox
-        name="group1"
-        value="New York"
-        label="DDR2"
-        [(ngModel)]="selectedCities"
-        inputId="ny"
-      ></p-checkbox>
-    </div>
-    <div class="p-col-12">
-      <p-checkbox
-        name="group1"
-        value="DDR6"
-        label="DDR6"
-        [(ngModel)]="selectedCities"
-        inputId="sf"
-      ></p-checkbox>
-    </div>
-    <div class="p-col-12">
-      <p-checkbox
-        name="group1"
-        value="DDR4"
-        label="DDR4"
-        [(ngModel)]="selectedCities"
-        inputId="la"
-      ></p-checkbox>
-    </div>
-    <div class="p-col-12">
-      <p-checkbox
-        name="group1"
-        value="DDR8"
-        label="DDR8"
-        [(ngModel)]="selectedCities"
-        inputId="la"
-      ></p-checkbox>
-    </div>
+<div class="p-grid">
+  <div class="p-col-12">
+    <p-checkbox
+      value="{{ value1 }}"
+      label="{{ label1 }}"
+      [(ngModel)]="selectedValues"
+    ></p-checkbox>
   </div>
-</p-accordionTab>
+  <div class="p-col-12">
+    <p-checkbox
+      value="{{ value2 }}"
+      label="{{ label2 }}"
+      [(ngModel)]="selectedValues"
+    ></p-checkbox>
+  </div>
+  <div class="p-col-12">
+    <p-checkbox
+      value="{{ value3 }}"
+      label="{{ label3 }}"
+      [(ngModel)]="selectedValues"
+    ></p-checkbox>
+  </div>
+  <div class="p-col-12">
+    <p-checkbox
+      value="{{ value4 }}"
+      label="{{ label4 }}"
+      [(ngModel)]="selectedValues"
+    ></p-checkbox>
+  </div>
+</div>

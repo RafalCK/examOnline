@@ -1,9 +1,18 @@
-<p-accordionTab header="Pytanie 1">
-  <p class="question__content">
-    Jak nazywa się producent procesorów, który wypuścił wymienione modele i3,
-    i5, i7 ?
-  </p>
-  <div class="question__input">
-    <input type="text" style="width: 30%;" pInputText />
-  </div>
-</p-accordionTab>
+<div class="question__input">
+  <input
+    (change)="inputAnswer($event)"
+    type="text"
+    style="width: 30%;"
+    pInputText
+  />
+  <button
+    pButton
+    style="width: 20%;"
+    (click)="checkAnswer($event)"
+    type="button"
+    label="Sprawdź"
+    class="ui-button-rounded ui-button-success"
+  ></button>
+  <p>{{ receivedParentMessage }}</p>
+  <p>{{ toast }}</p>
+</div>

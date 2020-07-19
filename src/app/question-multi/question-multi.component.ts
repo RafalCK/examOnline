@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
   selector: "app-question-multi",
@@ -6,7 +6,16 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./question-multi.component.scss"],
 })
 export class QuestionMultiComponent implements OnInit {
-  selectedCities: string[] = [];
+  selectedValues: string[] = [];
+  @Input() question: string;
+  @Input() value1: string;
+  @Input() value2: string;
+  @Input() value3: string;
+  @Input() value4: string;
+  @Input() label1: string;
+  @Input() label2: string;
+  @Input() label3: string;
+  @Input() label4: string;
 
   constructor() {}
 

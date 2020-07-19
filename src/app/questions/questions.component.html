@@ -1,6 +1,53 @@
 <div *ngFor="let question of questionsList; let i = index">
-  <p-accordionTab header="{{ question.header }} {{ i + 1 }}">
-    <p style="font-weight: 900;">Pytanie: {{ question.question }} ?</p>
-    <p>Odpowiedź: {{ question.answer }}</p>
+  <p-accordionTab header="Pytanie {{ i + 1 }}">
+    <p style="font-weight: 900; margin-bottom: 0.5rem;">
+      {{ question.question }}
+    </p>
+    <ng-container
+      *ngIf="
+        question.type === 'open';
+        then open;
+        else (question.type === 'choice' && choice) ||
+          (question.type === 'multi' && multi)
+      "
+    ></ng-container>
+    <ng-template #open
+      ><app-question-open
+        correctAnswer="{{ question.correctAnswer }}"
+        receivedParentMessage="{{ messaageToSendP }}"
+      ></app-question-open
+    ></ng-template>
+    <ng-template #choice
+      ><app-question-choice
+        value1="{{ question.value1 }}"
+        value2="{{ question.value2 }}"
+        value3="{{ question.value3 }}"
+        value4="{{ question.value4 }}"
+        label1="{{ question.label1 }}"
+        label2="{{ question.label2 }}"
+        label3="{{ question.label3 }}"
+        label4="{{ question.label4 }}"
+      ></app-question-choice
+    ></ng-template>
+    <ng-template #multi
+      ><app-question-multi
+        value1="{{ question.value1 }}"
+        value2="{{ question.value2 }}"
+        value3="{{ question.value3 }}"
+        value4="{{ question.value4 }}"
+        label1="{{ question.label1 }}"
+        label2="{{ question.label2 }}"
+        label3="{{ question.label3 }}"
+        label4="{{ question.label4 }}"
+      ></app-question-multi
+    ></ng-template>
   </p-accordionTab>
 </div>
+<button
+  pButton
+  style="width: 30%;"
+  type="button"
+  label="Zakończ egzamin"
+  class="ui-button-danger"
+  (click)="sendToChild('Hello Child !')"
+></button>

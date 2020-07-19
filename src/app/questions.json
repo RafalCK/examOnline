@@ -1,12 +1,33 @@
 [
   {
-    "header": "Pytanie",
-    "question": "Jak ma na imie najlepszy programista w APR",
-    "answer": "Norbert"
+    "type": "open",
+    "question": "Jak nazywa się producent procesorów, który wypuścił modele i3, i5, i7 ?",
+    "correctAnswer": "Intel"
   },
   {
-    "header": "Pytanie",
-    "question": "Jak ma na imie najlepszy kolega w APR",
-    "answer": "Rafał"
+    "type": "choice",
+    "question": "Jakie jest prawidłowe rozwinięcie skrótu HTML ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "Hyperlink Markup Language",
+    "label2": "Hypertext Markup Language",
+    "label3": "Hypertext Markup Links",
+    "label4": "Hierarchical Mark Language",
+    "correctAnswer": "Rafał"
+  },
+  {
+    "type": "multi",
+    "question": "Jakie są istiejące typy pamięci RAM ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "DDR2",
+    "label2": "DDR6",
+    "label3": "DDR4",
+    "label4": "DDR8",
+    "correctAnswer": "Ufaa"
   }
 ]
