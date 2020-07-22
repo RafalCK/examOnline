@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import questions from "../questions.json";
+import { QuestionOpenComponent } from "../question-open/question-open.component";
 
 @Component({
   selector: "app-questions",
@@ -24,9 +25,6 @@ export class QuestionsComponent implements OnInit {
   // example message
   messaageToSendP: string = "";
 
-  sendToChild(message: string) {
-    this.messaageToSendP = message;
-  }
   constructor() {}
 
   ngOnInit() {}

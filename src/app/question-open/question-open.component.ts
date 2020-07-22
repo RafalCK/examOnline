@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import questions from "../questions.json";
 
 @Component({
@@ -30,6 +30,10 @@ export class QuestionOpenComponent implements OnInit {
     } else {
       this.toast = "Nieprawidłowa odpowiedz";
     }
+  }
+
+  myFunctionOne() {
+    console.log("Call Function One from Component One");
   }
 
   constructor() {}

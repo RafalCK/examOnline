@@ -11,12 +11,12 @@
           (question.type === 'multi' && multi)
       "
     ></ng-container>
-    <ng-template #open
-      ><app-question-open
+    <ng-template #open>
+      <app-question-open
+        #one
         correctAnswer="{{ question.correctAnswer }}"
-        receivedParentMessage="{{ messaageToSendP }}"
-      ></app-question-open
-    ></ng-template>
+      ></app-question-open>
+    </ng-template>
     <ng-template #choice
       ><app-question-choice
         value1="{{ question.value1 }}"
@@ -49,5 +49,5 @@
   type="button"
   label="Zakończ egzamin"
   class="ui-button-danger"
-  (click)="sendToChild('Hello Child !')"
+  (click)="one.checkAnswer()"
 ></button>
