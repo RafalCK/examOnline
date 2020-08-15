@@ -13,7 +13,6 @@
     ></ng-container>
     <ng-template #open>
       <app-question-open
-        #one
         correctAnswer="{{ question.correctAnswer }}"
       ></app-question-open>
     </ng-template>
@@ -49,5 +48,4 @@
   type="button"
   label="Zakończ egzamin"
   class="ui-button-danger"
-  (click)="one.checkAnswer()"
 ></button>

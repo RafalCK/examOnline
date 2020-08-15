@@ -25,15 +25,17 @@ export class QuestionOpenComponent implements OnInit {
 
   //Sprawdzanie czy odpowiedz z inputa jest równa poprawnej odpowiedzi z JSON-a jesli tak to komunikat toast jesli nie to inny
   checkAnswer() {
-    if (this.answer === this.correctAnswer) {
+    if (
+      this.answer === this.correctAnswer ||
+      this.answer === this.correctAnswer.toUpperCase() ||
+      this.answer === this.correctAnswer.toLowerCase()
+    ) {
       this.toast = "Prawidłowa odpowiedz, brawo zdobywasz punkt";
+      console.log(this.answer);
     } else {
       this.toast = "Nieprawidłowa odpowiedz";
+      console.log(this.answer);
     }
-  }
-
-  myFunctionOne() {
-    console.log("Call Function One from Component One");
   }
 
   constructor() {}
