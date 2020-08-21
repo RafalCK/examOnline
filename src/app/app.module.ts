@@ -7,6 +7,7 @@ import { ButtonModule } from "primeng/button";
 import { AccordionModule } from "primeng/accordion";
 import { RadioButtonModule } from "primeng/radiobutton";
 import { CheckboxModule } from "primeng/checkbox";
+import { PanelModule } from "primeng/panel";
 
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./login/login.component";
@@ -19,7 +20,8 @@ import { QuestionChoiceComponent } from "./question-choice/question-choice.compo
 import { QuestionMultiComponent } from "./question-multi/question-multi.component";
 import { QuestionsBoardComponent } from "./questions-board/questions-board.component";
 import { ExamComponent } from "./exam/exam.component";
-import { UserInfoComponent } from './user-info/user-info.component';
+import { UserInfoComponent } from "./user-info/user-info.component";
+import { ExamResultComponent } from "./exam-result/exam-result.component";
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { UserInfoComponent } from './user-info/user-info.component';
     QuestionsBoardComponent,
     ExamComponent,
     UserInfoComponent,
+    ExamResultComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -45,6 +48,7 @@ import { UserInfoComponent } from './user-info/user-info.component';
     RadioButtonModule,
     CheckboxModule,
     FormsModule,
+    PanelModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

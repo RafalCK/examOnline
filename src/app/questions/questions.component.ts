@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import questions from "../questions.json";
-import { QuestionOpenComponent } from "../question-open/question-open.component";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-questions",
@@ -22,10 +22,11 @@ export class QuestionsComponent implements OnInit {
     label4: string;
   }[] = questions;
 
-  // example message
-  messaageToSendP: string = "";
+  goToResult() {
+    this.route.navigate(["/result"]);
+  }
 
-  constructor() {}
+  constructor(private route: Router) {}
 
   ngOnInit() {}
 }

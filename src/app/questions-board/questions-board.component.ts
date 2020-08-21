@@ -11,14 +11,9 @@ export class QuestionsBoardComponent implements OnInit {
   answer: string;
   correctAnswer: string;
   toast: string;
-  messageToSendP: string = "";
 
   endExam() {
     this.checkAnswers();
-  }
-
-  sendToChild(message: string) {
-    this.messageToSendP = message;
   }
 
   checkAnswers() {

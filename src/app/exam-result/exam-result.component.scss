@@ -1,0 +1,15 @@
+.subject__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  align-content: center;
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  &:after {
+    border-bottom: 3px solid #007ad9;
+    display: inline-block;
+    content: "Wyniki egzaminu";
+  }
+}

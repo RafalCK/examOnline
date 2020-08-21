@@ -25,6 +25,23 @@ export class QuestionChoiceComponent implements OnInit {
     correctAnswer: string;
   }[] = questions;
 
+  radioAnswerA(event: any) {
+    this.answer = this.label1;
+    console.log(this.answer);
+  }
+
+  radioAnswerB(event: any) {
+    this.answer = this.label2;
+    console.log(this.answer);
+  }
+  radioAnswerC(event: any) {
+    this.answer = this.label3;
+    console.log(this.answer);
+  }
+  radioAnswerD(event: any) {
+    this.answer = this.label4;
+    console.log(this.answer);
+  }
   checkAnswer() {
     if (this.answer === this.correctAnswer) {
       this.toast = "Prawidłowa odpowiedz, brawo zdobywasz punkt";

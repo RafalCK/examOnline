@@ -15,7 +15,7 @@
     "label2": "Hypertext Markup Language",
     "label3": "Hypertext Markup Links",
     "label4": "Hierarchical Mark Language",
-    "correctAnswer": "Rafał"
+    "correctAnswer": "Hypertext Markup Language"
   },
   {
     "type": "multi",
@@ -29,5 +29,72 @@
     "label3": "DDR4",
     "label4": "DDR8",
     "correctAnswer": "Ufaa"
+  },
+  {
+    "type": "open",
+    "question": "Jak nazywa się producent programów takich jak Word, Excel, Powerpoint ?",
+    "correctAnswer": "Microsoft"
+  },
+  {
+    "type": "open",
+    "question": "Jak nazywa się podstawowy edytor graficzny w systemie Windows ?",
+    "correctAnswer": "Paint"
+  },
+  {
+    "type": "choice",
+    "question": "Który format NIE jest formatem graficznym ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "JPEG",
+    "label2": "ZIP",
+    "label3": "PNG",
+    "label4": "SVG",
+    "correctAnswer": "Rafał"
+  },
+  {
+    "type": "multi",
+    "question": "Ilu bitowy może być system Windows ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "64",
+    "label2": "8",
+    "label3": "32",
+    "label4": "128",
+    "correctAnswer": "[A, C]"
+  },
+  {
+    "type": "choice",
+    "question": "Serwis na którym możemy umieścić swój filmik to ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "Onet",
+    "label2": "Youtube",
+    "label3": "Netflix",
+    "label4": "Amazon",
+    "correctAnswer": "Rafał"
+  },
+  {
+    "type": "choice",
+    "question": "Mp3 to format ?",
+    "value1": "",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "graficzny",
+    "label2": "tekstowy",
+    "label3": "muzyczny",
+    "label4": "wideo",
+    "correctAnswer": "Rafał"
+  },
+  {
+    "type": "open",
+    "question": "Jak firma jest odpowiedzialna za system macOS ?",
+    "correctAnswer": "Apple"
   }
 ]
