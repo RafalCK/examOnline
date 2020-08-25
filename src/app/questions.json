@@ -28,7 +28,8 @@
     "label2": "DDR6",
     "label3": "DDR4",
     "label4": "DDR8",
-    "correctAnswer": "Ufaa"
+    "correctAnswer": "DDR2,DDR4",
+    "correctAnswer2": "DDR4,DDR2"
   },
   {
     "type": "open",
@@ -51,7 +52,7 @@
     "label2": "ZIP",
     "label3": "PNG",
     "label4": "SVG",
-    "correctAnswer": "Rafał"
+    "correctAnswer": "ZIP"
   },
   {
     "type": "multi",
@@ -62,9 +63,10 @@
     "value4": "D",
     "label1": "64",
     "label2": "8",
-    "label3": "32",
-    "label4": "128",
-    "correctAnswer": "[A, C]"
+    "label3": "128",
+    "label4": "32",
+    "correctAnswer": "64,32",
+    "correctAnswer2": "32,64"
   },
   {
     "type": "choice",
@@ -77,12 +79,12 @@
     "label2": "Youtube",
     "label3": "Netflix",
     "label4": "Amazon",
-    "correctAnswer": "Rafał"
+    "correctAnswer": "Youtube"
   },
   {
     "type": "choice",
     "question": "Mp3 to format ?",
-    "value1": "",
+    "value1": "A",
     "value2": "B",
     "value3": "C",
     "value4": "D",
@@ -90,7 +92,7 @@
     "label2": "tekstowy",
     "label3": "muzyczny",
     "label4": "wideo",
-    "correctAnswer": "Rafał"
+    "correctAnswer": "muzyczny"
   },
   {
     "type": "open",

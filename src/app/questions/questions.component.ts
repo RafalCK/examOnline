@@ -12,6 +12,7 @@ export class QuestionsComponent implements OnInit {
     type: string;
     question: string;
     correctAnswer: string;
+    correctAnswer2: string;
     value1: string;
     value2: string;
     value3: string;

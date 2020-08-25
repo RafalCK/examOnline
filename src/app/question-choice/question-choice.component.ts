@@ -27,19 +27,23 @@ export class QuestionChoiceComponent implements OnInit {
 
   radioAnswerA(event: any) {
     this.answer = this.label1;
+    localStorage.setItem(`answer2`, `${this.label1}`);
     console.log(this.answer);
   }
 
   radioAnswerB(event: any) {
     this.answer = this.label2;
+    localStorage.setItem(`answer2`, `${this.answer}`);
     console.log(this.answer);
   }
   radioAnswerC(event: any) {
     this.answer = this.label3;
+    localStorage.setItem(`answer2`, `${this.answer}`);
     console.log(this.answer);
   }
   radioAnswerD(event: any) {
     this.answer = this.label4;
+    localStorage.setItem(`answer2`, `${this.answer}`);
     console.log(this.answer);
   }
   checkAnswer() {

@@ -9,8 +9,6 @@ import questions from "../questions.json";
 export class QuestionOpenComponent implements OnInit {
   // Przekazujemy do kompoentu z JSON-a poprawna odpowiedź
   @Input() correctAnswer: string;
-
-  @Input() receivedParentMessage: string;
   answer: string;
   toast: string;
   public questionsList: {
@@ -21,9 +19,9 @@ export class QuestionOpenComponent implements OnInit {
   // Get value from input
   inputAnswer(event: any) {
     this.answer = event.srcElement.value;
+    localStorage.setItem(`answer`, `${this.answer}`);
   }
 
-  //Sprawdzanie czy odpowiedz z inputa jest równa poprawnej odpowiedzi z JSON-a jesli tak to komunikat toast jesli nie to inny
   checkAnswer() {
     if (
       this.answer === this.correctAnswer ||

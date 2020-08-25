@@ -42,15 +42,19 @@
         label2="{{ question.label2 }}"
         label3="{{ question.label3 }}"
         label4="{{ question.label4 }}"
+        correctAnswer="{{ question.correctAnswer }}"
+        correctAnswer2="{{ question.correctAnswer2 }}"
       ></app-question-multi
     ></ng-template>
   </p-accordionTab>
 </div>
-<button
-  pButton
-  style="width: 30%;"
-  type="button"
-  label="Zakończ egzamin"
-  class="ui-button-danger"
-  (click)="goToResult($event)"
-></button>
+<div style="display: flex; justify-content: center; margin-top: 10px;">
+  <button
+    pButton
+    style="width: 30%;"
+    type="button"
+    label="Zakończ egzamin"
+    class="ui-button-danger"
+    (click)="goToResult()"
+  ></button>
+</div>

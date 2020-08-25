@@ -5,7 +5,6 @@
         value="{{ label1 }}"
         label="{{ label1 }}"
         [(ngModel)]="answer"
-        (click)="radioAnswerA($event)"
       ></p-radioButton>
     </div>
     <div class="p-col-12">
@@ -13,7 +12,6 @@
         value="{{ label2 }}"
         label="{{ label2 }}"
         [(ngModel)]="answer"
-        (click)="radioAnswerB($event)"
       ></p-radioButton>
     </div>
     <div class="p-col-12">
@@ -21,7 +19,6 @@
         value="{{ label3 }}"
         label="{{ label3 }}"
         [(ngModel)]="answer"
-        (click)="radioAnswerC($event)"
       ></p-radioButton>
     </div>
     <div class="p-col-12">
@@ -29,17 +26,7 @@
         value="{{ label4 }}"
         label="{{ label4 }}"
         [(ngModel)]="answer"
-        (click)="radioAnswerD($event)"
       ></p-radioButton>
     </div>
-    <button
-      pButton
-      style="width: 20%;"
-      (click)="checkAnswer($event)"
-      type="button"
-      label="Sprawdź"
-      class="ui-button-rounded ui-button-success"
-    ></button>
-    <p>{{ toast }}</p>
   </div>
 </div>

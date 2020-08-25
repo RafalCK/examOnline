@@ -3,7 +3,41 @@
 <div class="p-grid p-justify-center" style="margin-top: 0.5rem;">
   <div class="p-col-9">
     <p-panel header="Informatyka" [toggleable]="true">
-      Pytanie 1
+      <div
+        *ngFor="let question of questionsList; let i = index"
+        style="margin-bottom: 0.4rem;"
+      >
+        <span style="font-weight: 900; margin-bottom: 0.5rem;">
+          Pytanie {{ i + 1 }}
+        </span>
+        <p>{{ question.question }}</p>
+        <ng-container
+          *ngIf="
+            question.type === 'open';
+            then open;
+            else (question.type === 'choice' && choice) ||
+              (question.type === 'multi' && multi)
+          "
+        ></ng-container>
+        <ng-template #open>
+          <p>Twoja odpowiedź: {{ answer }}</p>
+          <p style="color: green;">
+            Poprawna odpowiedź: {{ question.correctAnswer }}
+          </p>
+        </ng-template>
+        <ng-template #choice>
+          <p>Twoja odpowiedź: {{ answer2 }}</p>
+          <p style="color: green;">
+            Poprawna odpowiedź: {{ question.correctAnswer }}
+          </p>
+        </ng-template>
+        <ng-template #multi>
+          <p>Twoja odpowiedź: {{ answer }}</p>
+          <p style="color: green;">
+            Poprawna odpowiedź: {{ question.correctAnswer }}
+          </p></ng-template
+        >
+      </div>
     </p-panel>
   </div>
 </div>
