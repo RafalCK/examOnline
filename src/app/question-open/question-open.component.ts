@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import questions from "../questions.json";
 
 @Component({
@@ -10,7 +10,9 @@ export class QuestionOpenComponent implements OnInit {
   // Przekazujemy do kompoentu z JSON-a poprawna odpowiedź
   @Input() correctAnswer: string;
   answer: string;
+  @Output() public putAnswer = new EventEmitter<string>();
   toast: string;
+  value: string;
   public questionsList: {
     question: string;
     correctAnswer: string;
@@ -19,7 +21,7 @@ export class QuestionOpenComponent implements OnInit {
   // Get value from input
   inputAnswer(event: any) {
     this.answer = event.srcElement.value;
-    localStorage.setItem(`answer`, `${this.answer}`);
+    this.putAnswer.emit(this.answer);
   }
 
   checkAnswer() {

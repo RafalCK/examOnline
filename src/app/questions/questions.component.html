@@ -1,9 +1,9 @@
 <div
   *ngFor="let question of questionsList; let i = index"
-  style="margin-bottom: 0.4rem;"
+  style="margin-bottom: 0.4rem"
 >
   <p-accordionTab header="Pytanie {{ i + 1 }}">
-    <p style="font-weight: 900; margin-bottom: 0.5rem;">
+    <p style="font-weight: 900; margin-bottom: 0.5rem">
       {{ question.question }}
     </p>
     <ng-container
@@ -17,6 +17,7 @@
     <ng-template #open>
       <app-question-open
         correctAnswer="{{ question.correctAnswer }}"
+        (putAnswer)="goToResult($event)"
       ></app-question-open>
     </ng-template>
     <ng-template #choice
@@ -48,13 +49,13 @@
     ></ng-template>
   </p-accordionTab>
 </div>
-<div style="display: flex; justify-content: center; margin-top: 10px;">
+<div style="display: flex; justify-content: center; margin-top: 10px">
   <button
     pButton
-    style="width: 30%;"
+    style="width: 30%"
     type="button"
     label="Zakończ egzamin"
     class="ui-button-danger"
-    (click)="goToResult()"
+    (click)="goToResult($event)"
   ></button>
 </div>
