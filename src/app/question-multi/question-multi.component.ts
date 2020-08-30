@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import questions from "../questions.json";
 
 @Component({
@@ -8,8 +8,11 @@ import questions from "../questions.json";
 })
 export class QuestionMultiComponent implements OnInit {
   selectedValues: string[] = [];
+  @Input() points: number;
+  @Output() public pointsChange = new EventEmitter<number>();
   toArray: string;
   toast: string;
+  isDisabled = false;
   @Input() correctAnswer: string;
   @Input() correctAnswer2: string;
   @Input() question: string;
@@ -28,19 +31,22 @@ export class QuestionMultiComponent implements OnInit {
     correctAnswer2: string;
   }[] = questions;
 
+  public addPoint() {
+    this.pointsChange.emit(++this.points);
+  }
+
   checkAnswer() {
-    const toArray = this.selectedValues.toString();
-    if (toArray === this.correctAnswer || toArray === this.correctAnswer2) {
-      this.toast = "Prawidłowa odpowiedz, brawo zdobywasz punkt";
-      console.log(this.correctAnswer);
-      console.log(this.correctAnswer2);
-      console.log(toArray);
+    this.toArray = this.selectedValues.toString();
+    if (
+      this.toArray === this.correctAnswer ||
+      this.toArray === this.correctAnswer2
+    ) {
+      this.toast = "Prawidłowa odpowiedz, zdobywasz jeden punkt";
+      this.addPoint();
     } else {
-      this.toast = "Nieprawidłowa odpowiedz";
-      console.log(this.correctAnswer);
-      console.log(this.correctAnswer2);
-      console.log(toArray);
+      this.toast = `Nieprawidłowa odpowiedz, poprawna to ${this.correctAnswer} lub ${this.correctAnswer2} `;
     }
+    this.isDisabled = !this.isDisabled;
   }
 
   constructor() {}

@@ -9,19 +9,20 @@ import questions from "../questions.json";
 export class QuestionOpenComponent implements OnInit {
   // Przekazujemy do kompoentu z JSON-a poprawna odpowiedź
   @Input() correctAnswer: string;
+  @Input() points: number;
+  @Output() public pointsChange = new EventEmitter<number>();
   answer: string;
-  @Output() public putAnswer = new EventEmitter<string>();
   toast: string;
   value: string;
+  isDisabled = false;
   public questionsList: {
     question: string;
     correctAnswer: string;
   }[] = questions;
 
   // Get value from input
-  inputAnswer(event: any) {
-    this.answer = event.srcElement.value;
-    this.putAnswer.emit(this.answer);
+  public addPoint() {
+    this.pointsChange.emit(++this.points);
   }
 
   checkAnswer() {
@@ -30,12 +31,12 @@ export class QuestionOpenComponent implements OnInit {
       this.answer === this.correctAnswer.toUpperCase() ||
       this.answer === this.correctAnswer.toLowerCase()
     ) {
-      this.toast = "Prawidłowa odpowiedz, brawo zdobywasz punkt";
-      console.log(this.answer);
+      this.toast = "Prawidłowa odpowiedz, zdobywasz jeden punkt";
+      this.addPoint();
     } else {
-      this.toast = "Nieprawidłowa odpowiedz";
-      console.log(this.answer);
+      this.toast = `Nieprawidłowa odpowiedz, poprawna to ${this.correctAnswer}`;
     }
+    this.isDisabled = !this.isDisabled;
   }
 
   constructor() {}

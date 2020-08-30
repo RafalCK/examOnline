@@ -1,0 +1,29 @@
+.question__input {
+  width: 30%;
+  @media only screen and (max-width: 425px) {
+    width: 45%;
+  }
+  @media only screen and (min-width: 426px) and (max-width: 960px) {
+    width: 50%;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1500px) {
+    width: 40%;
+  }
+}
+
+.question__btn {
+  width: 15%;
+  margin-left: 10px;
+  @media only screen and (max-width: 425px) {
+    margin-left: 5px;
+    width: 50%;
+  }
+  @media only screen and (min-width: 426px) and (max-width: 960px) {
+    margin-left: 5px;
+    width: 48%;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1500px) {
+    margin-left: 5px;
+    width: 30%;
+  }
+}

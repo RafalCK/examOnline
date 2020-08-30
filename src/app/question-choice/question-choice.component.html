@@ -5,6 +5,7 @@
         value="{{ label1 }}"
         label="{{ label1 }}"
         [(ngModel)]="answer"
+        [disabled]="isDisabled"
       ></p-radioButton>
     </div>
     <div class="p-col-12">
@@ -12,6 +13,7 @@
         value="{{ label2 }}"
         label="{{ label2 }}"
         [(ngModel)]="answer"
+        [disabled]="isDisabled"
       ></p-radioButton>
     </div>
     <div class="p-col-12">
@@ -19,6 +21,7 @@
         value="{{ label3 }}"
         label="{{ label3 }}"
         [(ngModel)]="answer"
+        [disabled]="isDisabled"
       ></p-radioButton>
     </div>
     <div class="p-col-12">
@@ -26,7 +29,25 @@
         value="{{ label4 }}"
         label="{{ label4 }}"
         [(ngModel)]="answer"
+        [disabled]="isDisabled"
       ></p-radioButton>
     </div>
+    <button
+      pButton
+      type="button"
+      label="Sprwadź odpowiedź"
+      class="ui-button-success question__button"
+      (click)="checkAnswer()"
+      [disabled]="isDisabled"
+    ></button>
+    <p
+      [ngClass]="
+        answer === correctAnswer
+          ? 'question__toast--green'
+          : 'question__toast--red'
+      "
+    >
+      {{ toast }}
+    </p>
   </div>
 </div>

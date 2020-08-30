@@ -17,7 +17,8 @@
     <ng-template #open>
       <app-question-open
         correctAnswer="{{ question.correctAnswer }}"
-        (putAnswer)="goToResult($event)"
+        (pointsChange)="receivePoints($event)"
+        [points]="points"
       ></app-question-open>
     </ng-template>
     <ng-template #choice
@@ -31,6 +32,8 @@
         label3="{{ question.label3 }}"
         label4="{{ question.label4 }}"
         correctAnswer="{{ question.correctAnswer }}"
+        (pointsChange)="receivePoints($event)"
+        [points]="points"
       ></app-question-choice
     ></ng-template>
     <ng-template #multi
@@ -45,6 +48,8 @@
         label4="{{ question.label4 }}"
         correctAnswer="{{ question.correctAnswer }}"
         correctAnswer2="{{ question.correctAnswer2 }}"
+        (pointsChange)="receivePoints($event)"
+        [points]="points"
       ></app-question-multi
     ></ng-template>
   </p-accordionTab>
@@ -54,8 +59,10 @@
     pButton
     style="width: 30%"
     type="button"
+    (click)="getMark()"
     label="Zakończ egzamin"
     class="ui-button-danger"
-    (click)="goToResult($event)"
   ></button>
 </div>
+<p style="color: white">Liczba punktów : {{ points }}</p>
+<p style="color: white">Ocena : {{ mark }}</p>

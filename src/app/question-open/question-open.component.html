@@ -1,8 +1,28 @@
-<div class="question__input">
+<div class="question">
   <input
-    (change)="inputAnswer($event)"
     type="text"
-    style="width: 30%"
+    class="question__input"
+    [(ngModel)]="answer"
+    [disabled]="isDisabled"
     pInputText
   />
+  <button
+    pButton
+    type="button"
+    label="Sprwadź odpowiedź"
+    class="ui-button-success question__btn"
+    (click)="checkAnswer()"
+    [disabled]="isDisabled"
+  ></button>
 </div>
+<p
+  [ngClass]="
+    answer === correctAnswer ||
+    answer === correctAnswer.toUpperCase() ||
+    answer === correctAnswer.toLowerCase()
+      ? 'question__toast--green'
+      : 'question__toast--red'
+  "
+>
+  {{ toast }}
+</p>

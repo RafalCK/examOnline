@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import questions from "../questions.json";
 
 @Component({
@@ -9,6 +9,9 @@ import questions from "../questions.json";
 export class QuestionChoiceComponent implements OnInit {
   answer: string;
   toast: string;
+  @Input() points: number;
+  isDisabled = false;
+  @Output() public pointsChange = new EventEmitter<number>();
   @Input() correctAnswer: string;
   @Input() question: string;
   @Input() value1: string;
@@ -25,35 +28,18 @@ export class QuestionChoiceComponent implements OnInit {
     correctAnswer: string;
   }[] = questions;
 
-  radioAnswerA(event: any) {
-    this.answer = this.label1;
-    localStorage.setItem(`answer2`, `${this.label1}`);
-    console.log(this.answer);
+  public addPoint() {
+    this.pointsChange.emit(++this.points);
   }
 
-  radioAnswerB(event: any) {
-    this.answer = this.label2;
-    localStorage.setItem(`answer2`, `${this.answer}`);
-    console.log(this.answer);
-  }
-  radioAnswerC(event: any) {
-    this.answer = this.label3;
-    localStorage.setItem(`answer2`, `${this.answer}`);
-    console.log(this.answer);
-  }
-  radioAnswerD(event: any) {
-    this.answer = this.label4;
-    localStorage.setItem(`answer2`, `${this.answer}`);
-    console.log(this.answer);
-  }
   checkAnswer() {
     if (this.answer === this.correctAnswer) {
-      this.toast = "Prawidłowa odpowiedz, brawo zdobywasz punkt";
-      console.log(this.answer);
+      this.toast = "Prawidłowa odpowiedz, zdobywasz jeden punkt";
+      this.addPoint();
     } else {
-      this.toast = "Nieprawidłowa odpowiedz";
-      console.log(this.answer);
+      this.toast = `Nieprawidłowa odpowiedz, poprawna to ${this.correctAnswer}`;
     }
+    this.isDisabled = !this.isDisabled;
   }
 
   constructor() {}

@@ -19,3 +19,26 @@ body {
 .ui-float-label > label {
   color: #3d99e0 !important;
 }
+
+.question__button {
+  width: 16%;
+  @media only screen and (max-width: 425px) {
+    width: 80%;
+  }
+  @media only screen and (min-width: 426px) and (max-width: 960px) {
+    width: 58%;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1500px) {
+    width: 25%;
+  }
+}
+
+.question__toast--green {
+  color: #34a835;
+  margin-top: 5px !important;
+}
+
+.question__toast--red {
+  color: #e91224;
+  margin-top: 5px !important;
+}

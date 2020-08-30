@@ -4,6 +4,7 @@
       value="{{ label1 }}"
       label="{{ label1 }}"
       [(ngModel)]="selectedValues"
+      [disabled]="isDisabled"
     ></p-checkbox>
   </div>
   <div class="p-col-12">
@@ -11,6 +12,7 @@
       value="{{ label2 }}"
       label="{{ label2 }}"
       [(ngModel)]="selectedValues"
+      [disabled]="isDisabled"
     ></p-checkbox>
   </div>
   <div class="p-col-12">
@@ -18,6 +20,7 @@
       value="{{ label3 }}"
       label="{{ label3 }}"
       [(ngModel)]="selectedValues"
+      [disabled]="isDisabled"
     ></p-checkbox>
   </div>
   <div class="p-col-12">
@@ -25,6 +28,24 @@
       value="{{ label4 }}"
       label="{{ label4 }}"
       [(ngModel)]="selectedValues"
+      [disabled]="isDisabled"
     ></p-checkbox>
   </div>
+  <button
+    pButton
+    type="button"
+    label="Sprwadź odpowiedź"
+    class="ui-button-success question__button"
+    (click)="checkAnswer()"
+    [disabled]="isDisabled"
+  ></button>
 </div>
+<p
+  [ngClass]="
+    toArray === correctAnswer || toArray === correctAnswer2
+      ? 'question__toast--green'
+      : 'question__toast--red'
+  "
+>
+  {{ toast }}
+</p>
