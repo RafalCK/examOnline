@@ -1,9 +1,10 @@
 <app-user-info></app-user-info>
 <div class="subject__header"></div>
-<div class="p-grid p-justify-center" style="margin-top: 0.5rem;">
+<div class="p-grid p-justify-center" style="margin-top: 0.5rem">
   <div class="p-col-9">
     <p-accordion [multiple]="true">
       <app-questions></app-questions>
+      <p>Wybrałeś {{ subjectId }}</p>
     </p-accordion>
   </div>
 </div>

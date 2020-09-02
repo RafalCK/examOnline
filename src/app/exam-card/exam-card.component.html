@@ -4,15 +4,15 @@
       <img
         src="{{ srcImg }}"
         alt="Avatar"
-        style="width: 300px; height: 170px;"
+        style="width: 300px; height: 170px"
       />
     </div>
     <div class="card__back">
       <h1>{{ header }}</h1>
       <button
         pButton
-        (click)="goToExam()"
-        style="width: 60%;"
+        (click)="onSelect(subject)"
+        style="width: 60%"
         type="button"
         label="Przejdź do egzaminu"
         class="ui-button-secondary"

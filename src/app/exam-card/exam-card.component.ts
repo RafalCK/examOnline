@@ -10,13 +10,18 @@ export class ExamCardComponent implements OnInit {
   @Input() header: string;
   @Input() srcImg: string;
   @Input() maxPoints: number;
+  @Input() subject: string;
   recivePoints = 0;
 
-  goToExam() {
-    this.route.navigate(["/pytania"]);
-  }
+  // goToExam() {
+  //   this.route.navigate([`${this.navigatePath}`]);
+  // }
 
-  constructor(private route: Router) {}
+  constructor(private router: Router) {}
+
+  onSelect(subject) {
+    this.router.navigate(["/egzamin", subject.id]);
+  }
 
   ngOnInit() {}
 }

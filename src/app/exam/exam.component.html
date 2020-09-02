@@ -1,19 +1,12 @@
 <app-user-info></app-user-info>
 <div class="subject__header"></div>
 <div class="subject__wrapper">
-  <app-exam-card
-    header="Informatyka"
-    srcImg="../../assets/img/it.jpg"
-    maxPoints="10"
-  ></app-exam-card>
-  <app-exam-card
-    header="Biologia"
-    srcImg="../../assets/img/biology.jpg"
-    maxPoints="10"
-  ></app-exam-card>
-  <app-exam-card
-    header="Historia"
-    srcImg="../../assets/img/history.jpg"
-    maxPoints="10"
-  ></app-exam-card>
+  <div *ngFor="let subject of subjects">
+    <app-exam-card
+      header="{{ subject.name }}"
+      srcImg="{{ subject.img }}"
+      maxPoints="10"
+      [subject]="subject"
+    ></app-exam-card>
+  </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-questions-board",
@@ -24,9 +25,13 @@ export class QuestionsBoardComponent implements OnInit {
     }
   }
 
-  constructor() {}
+  public subjectId;
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    let id = parseInt(this.route.snapshot.paramMap.get("id"));
+    this.subjectId = id;
+  }
 }
 
 interface Question {

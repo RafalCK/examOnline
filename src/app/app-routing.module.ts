@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full" },
   { path: "login", component: LoginComponent },
   { path: "egzamin", component: ExamComponent },
+  { path: "egzamin/:id", component: QuestionsBoardComponent },
   { path: "pytania", component: QuestionsBoardComponent },
   { path: "result", component: ExamResultComponent },
 ];
