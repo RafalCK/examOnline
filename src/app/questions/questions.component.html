@@ -54,6 +54,8 @@
     ></ng-template>
   </p-accordionTab>
 </div>
+<p style="color: white">Liczba punktów : {{ points }}</p>
+<p style="color: white">Ocena : {{ mark }}</p>
 <div style="display: flex; justify-content: center; margin-top: 10px">
   <button
     pButton
@@ -64,5 +66,13 @@
     class="ui-button-danger"
   ></button>
 </div>
-<p style="color: white">Liczba punktów : {{ points }}</p>
-<p style="color: white">Ocena : {{ mark }}</p>
+<div style="display: flex; justify-content: center; margin-top: 10px">
+  <button
+    pButton
+    style="width: 30%"
+    type="button"
+    (click)="goToMainPage()"
+    label="Powrót do strony głównej"
+    class="ui-button-info"
+  ></button>
+</div>

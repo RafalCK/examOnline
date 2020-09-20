@@ -21,7 +21,6 @@ import { QuestionMultiComponent } from "./question-multi/question-multi.componen
 import { QuestionsBoardComponent } from "./questions-board/questions-board.component";
 import { ExamComponent } from "./exam/exam.component";
 import { UserInfoComponent } from "./user-info/user-info.component";
-import { ExamResultComponent } from "./exam-result/exam-result.component";
 
 @NgModule({
   declarations: [
@@ -35,7 +34,6 @@ import { ExamResultComponent } from "./exam-result/exam-result.component";
     QuestionsBoardComponent,
     ExamComponent,
     UserInfoComponent,
-    ExamResultComponent,
   ],
   imports: [
     BrowserAnimationsModule,

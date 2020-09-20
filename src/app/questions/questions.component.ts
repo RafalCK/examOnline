@@ -1,28 +1,21 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import questions from "../questions.json";
 import { Router } from "@angular/router";
-import { EQuestionType } from "./question.enum";
 
-export interface QuestionModel {
-  type: EQuestionType;
+export interface Question {
+  subjectId: string;
+  type: string;
   question: string;
-}
-
-export interface QuestionOpenModel extends QuestionModel {
   correctAnswer: string;
-  type: EQuestionType.open;
-}
-
-export interface QuestionChoice extends QuestionModel {
-  correctAnswer: string;
-  labels: string[];
-  type: EQuestionType.choice;
-}
-
-export interface QuestionMulti extends QuestionModel {
-  correctAnswers: string[];
-  labels: string[];
-  type: EQuestionType.multi;
+  correctAnswer2: string;
+  value1: string;
+  value2: string;
+  value3: string;
+  value4: string;
+  label1: string;
+  label2: string;
+  label3: string;
+  label4: string;
 }
 
 @Component({
@@ -31,25 +24,17 @@ export interface QuestionMulti extends QuestionModel {
   styleUrls: ["./questions.component.scss"],
 })
 export class QuestionsComponent implements OnInit {
-  public questionsList: {
-    type: string;
-    question: string;
-    correctAnswer: string;
-    correctAnswer2: string;
-    value1: string;
-    value2: string;
-    value3: string;
-    value4: string;
-    label1: string;
-    label2: string;
-    label3: string;
-    label4: string;
-  }[] = questions;
+  @Input() subjectId: number;
+
+  public questionsList: Question[] = questions;
 
   answer: string;
+  filtervalues = [];
   answerArray = [];
   points = 0;
   mark: string;
+
+  constructor(private route: Router) {}
 
   receivePoints($event) {
     this.points = $event;
@@ -103,7 +88,13 @@ export class QuestionsComponent implements OnInit {
     console.log(this.answerArray);
   }
 
-  constructor(private route: Router) {}
+  goToMainPage() {
+    this.route.navigate(["/egzamin"]);
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.questionsList = (<Question[]>questions).filter(
+      (i) => i.subjectId === this.subjectId.toString()
+    );
+  }
 }

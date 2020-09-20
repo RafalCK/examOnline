@@ -1,10 +1,12 @@
 [
   {
+    "subjectId": "1",
     "type": "open",
     "question": "Jak nazywa się producent procesorów, który wypuścił modele i3, i5, i7 ?",
     "correctAnswer": "Intel"
   },
   {
+    "subjectId": "1",
     "type": "choice",
     "question": "Jakie jest prawidłowe rozwinięcie skrótu HTML ?",
     "value1": "A",
@@ -18,6 +20,7 @@
     "correctAnswer": "Hypertext Markup Language"
   },
   {
+    "subjectId": "1",
     "type": "multi",
     "question": "Jakie są istiejące typy pamięci RAM ?",
     "value1": "A",
@@ -32,16 +35,19 @@
     "correctAnswer2": "DDR4,DDR2"
   },
   {
+    "subjectId": "1",
     "type": "open",
     "question": "Jak nazywa się producent programów takich jak Word, Excel, Powerpoint ?",
     "correctAnswer": "Microsoft"
   },
   {
+    "subjectId": "1",
     "type": "open",
     "question": "Jak nazywa się podstawowy edytor graficzny w systemie Windows ?",
     "correctAnswer": "Paint"
   },
   {
+    "subjectId": "1",
     "type": "choice",
     "question": "Który format NIE jest formatem graficznym ?",
     "value1": "A",
@@ -55,6 +61,7 @@
     "correctAnswer": "ZIP"
   },
   {
+    "subjectId": "1",
     "type": "multi",
     "question": "Ilu bitowy może być system Windows ?",
     "value1": "A",
@@ -69,6 +76,7 @@
     "correctAnswer2": "32,64"
   },
   {
+    "subjectId": "1",
     "type": "choice",
     "question": "Serwis na którym możemy umieścić swój filmik to ?",
     "value1": "A",
@@ -82,6 +90,7 @@
     "correctAnswer": "Youtube"
   },
   {
+    "subjectId": "1",
     "type": "choice",
     "question": "Mp3 to format ?",
     "value1": "A",
@@ -95,8 +104,229 @@
     "correctAnswer": "muzyczny"
   },
   {
+    "subjectId": "1",
     "type": "open",
     "question": "Jak firma jest odpowiedzialna za system macOS ?",
     "correctAnswer": "Apple"
+  },
+  {
+    "subjectId": "2",
+    "type": "open",
+    "question": "Ryba oddycha przez ?",
+    "correctAnswer": "Skrzela"
+  },
+  {
+    "subjectId": "2",
+    "type": "choice",
+    "question": "Który z naukowców dokonał odkrycia penicyliny ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "Ludwik Pasteur",
+    "label2": "Robert Koch",
+    "label3": "Karol Trochanowski",
+    "label4": "Alexander Fleming",
+    "correctAnswer": "Alexander Fleming"
+  },
+  {
+    "subjectId": "2",
+    "type": "multi",
+    "question": "Jakie są istiejące typy witamin ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "Witamina Y",
+    "label2": "Witamina D",
+    "label3": "Witamina X",
+    "label4": "Witamina K",
+    "correctAnswer": "Witamina D,Witamina K",
+    "correctAnswer2": "Witamina K,Witamina D"
+  },
+  {
+    "subjectId": "2",
+    "type": "open",
+    "question": "Co pompuje krew do płuc ?",
+    "correctAnswer": "Serce"
+  },
+  {
+    "subjectId": "2",
+    "type": "choice",
+    "question": "Dziobak to ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "torbacz",
+    "label2": "ssak",
+    "label3": "waleń",
+    "label4": "obleniec",
+    "correctAnswer": "ssak"
+  },
+  {
+    "subjectId": "2",
+    "type": "open",
+    "question": "Proces, który jest sposobem odżywiania się organizmów np. roślin ?",
+    "correctAnswer": "Fotosynteza"
+  },
+  {
+    "subjectId": "2",
+    "type": "multi",
+    "question": "Owadem jest ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "chrząszcz",
+    "label2": "ważka",
+    "label3": "dorada",
+    "label4": "sierpówka",
+    "correctAnswer": "chrząszcz,ważka",
+    "correctAnswer2": "ważka,chrząszcz"
+  },
+  {
+    "subjectId": "2",
+    "type": "choice",
+    "question": "Gdzie przechowywany jest pokarm ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "jelito grubo",
+    "label2": "jelito cienkie",
+    "label3": "żołądek",
+    "label4": "trzustka",
+    "correctAnswer": "jelito grube"
+  },
+  {
+    "subjectId": "2",
+    "type": "choice",
+    "question": "Sosna to drzewo gatunku ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "liściastego",
+    "label2": "krzewu",
+    "label3": "iglastego",
+    "label4": "doniczkowego",
+    "correctAnswer": "iglastego"
+  },
+  {
+    "subjectId": "2",
+    "type": "open",
+    "question": "Białko w krwinkach czerwonych ?",
+    "correctAnswer": "Hemoglobina"
+  },
+  {
+    "subjectId": "3",
+    "type": "open",
+    "question": "Jakie powstanie miało miejsce 1 sierpnia 1944 ?",
+    "correctAnswer": "Warszawskie"
+  },
+  {
+    "subjectId": "3",
+    "type": "choice",
+    "question": "W któym roku miała miejsce bitwa pod Grunwaldem ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "1580",
+    "label2": "1410",
+    "label3": "1395",
+    "label4": "1140",
+    "correctAnswer": "1410"
+  },
+  {
+    "subjectId": "3",
+    "type": "multi",
+    "question": "Jakie kraje brały udział w I wojnie światowej ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "Rosja",
+    "label2": "Estonia",
+    "label3": "Niemcy",
+    "label4": "Szwajcaria",
+    "correctAnswer": "Rosja,Niemcy",
+    "correctAnswer2": "Niemcy,Rosja"
+  },
+  {
+    "subjectId": "3",
+    "type": "open",
+    "question": "Jak na imię miał król Łokietek",
+    "correctAnswer": "Władysław"
+  },
+  {
+    "subjectId": "3",
+    "type": "open",
+    "question": "Jak miasto było pierwszą stolica Polski ?",
+    "correctAnswer": "Gniezno"
+  },
+  {
+    "subjectId": "3",
+    "type": "choice",
+    "question": "Kto był pierwszym królem Polski ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "Siemmomysł",
+    "label2": "Lestek",
+    "label3": "Mieszko I",
+    "label4": "Lech",
+    "correctAnswer": "Mieszko I"
+  },
+  {
+    "subjectId": "3",
+    "type": "multi",
+    "question": "Które kraje wchodziły w skład aliantów ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "Tunezja",
+    "label2": "Francja",
+    "label3": "Wielka Brytania",
+    "label4": "Niemcy",
+    "correctAnswer": "Francja,Wielka Brytania",
+    "correctAnswer2": "Wielka Brytania,Francja"
+  },
+  {
+    "subjectId": "3",
+    "type": "choice",
+    "question": "Gdzie odbył się Hołd Pruski ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "W Krakowie",
+    "label2": "W Warszawie",
+    "label3": "W Malborku",
+    "label4": "W Królewcu",
+    "correctAnswer": "W Krakowie"
+  },
+  {
+    "subjectId": "3",
+    "type": "choice",
+    "question": "Jakie stanowisko zajmował Józef Piłsudski w 1918 r. ?",
+    "value1": "A",
+    "value2": "B",
+    "value3": "C",
+    "value4": "D",
+    "label1": "Prezydenta",
+    "label2": "Premiera",
+    "label3": "Tymczasowego Naczelnika Państwa",
+    "label4": "Marszałka Sejmu",
+    "correctAnswer": "Tymczasowego Naczelnika Państwa"
+  },
+  {
+    "subjectId": "3",
+    "type": "open",
+    "question": "W którym roku miało miejsce rozpoczęcie potopu szwedzkiego ?",
+    "correctAnswer": "1655"
   }
 ]

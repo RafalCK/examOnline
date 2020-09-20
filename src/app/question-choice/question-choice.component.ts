@@ -7,10 +7,7 @@ import questions from "../questions.json";
   styleUrls: ["./question-choice.component.scss"],
 })
 export class QuestionChoiceComponent implements OnInit {
-  answer: string;
-  toast: string;
   @Input() points: number;
-  isDisabled = false;
   @Output() public pointsChange = new EventEmitter<number>();
   @Input() correctAnswer: string;
   @Input() question: string;
@@ -22,6 +19,9 @@ export class QuestionChoiceComponent implements OnInit {
   @Input() label2: string;
   @Input() label3: string;
   @Input() label4: string;
+  isDisabled = false;
+  answer: string;
+  toast: string;
 
   public questionsList: {
     question: string;
@@ -32,7 +32,7 @@ export class QuestionChoiceComponent implements OnInit {
     this.pointsChange.emit(++this.points);
   }
 
-  checkAnswer() {
+  public checkAnswer() {
     if (this.answer === this.correctAnswer) {
       this.toast = "Prawidłowa odpowiedz, zdobywasz jeden punkt";
       this.addPoint();

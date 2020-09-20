@@ -8,11 +8,11 @@ import questions from "../questions.json";
 })
 export class QuestionMultiComponent implements OnInit {
   selectedValues: string[] = [];
-  @Input() points: number;
-  @Output() public pointsChange = new EventEmitter<number>();
   toArray: string;
   toast: string;
   isDisabled = false;
+  @Input() points: number;
+  @Output() public pointsChange = new EventEmitter<number>();
   @Input() correctAnswer: string;
   @Input() correctAnswer2: string;
   @Input() question: string;

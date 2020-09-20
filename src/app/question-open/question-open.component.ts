@@ -7,20 +7,13 @@ import questions from "../questions.json";
   styleUrls: ["./question-open.component.scss"],
 })
 export class QuestionOpenComponent implements OnInit {
-  // Przekazujemy do kompoentu z JSON-a poprawna odpowiedź
   @Input() correctAnswer: string;
   @Input() points: number;
   @Output() public pointsChange = new EventEmitter<number>();
   answer: string;
   toast: string;
-  value: string;
   isDisabled = false;
-  public questionsList: {
-    question: string;
-    correctAnswer: string;
-  }[] = questions;
 
-  // Get value from input
   public addPoint() {
     this.pointsChange.emit(++this.points);
   }

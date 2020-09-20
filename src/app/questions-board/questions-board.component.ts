@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
@@ -12,10 +12,7 @@ export class QuestionsBoardComponent implements OnInit {
   answer: string;
   correctAnswer: string;
   toast: string;
-
-  endExam() {
-    this.checkAnswers();
-  }
+  @Input() public subjectId: number;
 
   checkAnswers() {
     if (this.answer === this.correctAnswer) {
@@ -25,28 +22,10 @@ export class QuestionsBoardComponent implements OnInit {
     }
   }
 
-  public subjectId;
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
     let id = parseInt(this.route.snapshot.paramMap.get("id"));
     this.subjectId = id;
   }
-}
-
-interface Question {
-  question: string;
-  type: string;
-}
-
-interface QuestionOpen extends Question {
-  anserw: string;
-}
-
-interface QuestionChoice extends Question {
-  anserwValue: string;
-}
-
-interface QuestionMulti extends Question {
-  anserwValue: string[];
 }

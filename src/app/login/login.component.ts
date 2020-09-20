@@ -9,8 +9,6 @@ import { Router } from "@angular/router";
 export class LoginComponent implements OnInit {
   name: string;
   surname: string;
-  localname: string;
-  localsurname: string;
 
   inputName(event: any) {
     this.name = event.srcElement.value;

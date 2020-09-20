@@ -9,13 +9,7 @@ import { Router } from "@angular/router";
 export class ExamCardComponent implements OnInit {
   @Input() header: string;
   @Input() srcImg: string;
-  @Input() maxPoints: number;
   @Input() subject: string;
-  recivePoints = 0;
-
-  // goToExam() {
-  //   this.route.navigate([`${this.navigatePath}`]);
-  // }
 
   constructor(private router: Router) {}
 
