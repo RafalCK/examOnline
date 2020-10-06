@@ -1,5 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import questions from "../questions.json";
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: "app-question-open",
@@ -13,6 +12,8 @@ export class QuestionOpenComponent implements OnInit {
   answer: string;
   toast: string;
   isDisabled = false;
+
+  // NBA Znowu sie powtarza kod
 
   public addPoint() {
     this.pointsChange.emit(++this.points);
@@ -31,6 +32,8 @@ export class QuestionOpenComponent implements OnInit {
     }
     this.isDisabled = !this.isDisabled;
   }
+
+  // NBA Puste metody
 
   constructor() {}
 

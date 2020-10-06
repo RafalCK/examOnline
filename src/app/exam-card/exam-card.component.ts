@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { Router } from "@angular/router";
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-exam-card",
@@ -13,9 +13,12 @@ export class ExamCardComponent implements OnInit {
 
   constructor(private router: Router) {}
 
+  // NBA Brak typu
   onSelect(subject) {
+    // NBA Nazwa do enuma?
     this.router.navigate(["/egzamin", subject.id]);
   }
 
+  // Pusty OnInit, jest to potrzebne?
   ngOnInit() {}
 }

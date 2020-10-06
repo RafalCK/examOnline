@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import questions from "../questions.json";
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
+import questions from '../questions.json';
 
 @Component({
   selector: "app-question-multi",
@@ -31,10 +32,14 @@ export class QuestionMultiComponent implements OnInit {
     correctAnswer2: string;
   }[] = questions;
 
+  // NBA masz taka sama metode w question choice, albo serwis albo dziedziczenie
   public addPoint() {
     this.pointsChange.emit(++this.points);
   }
 
+  // NBA kod tutaj też się powtarza z tym w klasie question choice tutaj jest dobra opcja na zastosowanie LSP
+  // czyli dziedzicznie + polimorfizm. Tak wiem że to wydaje się trudne i przecież tylko wspominałem
+  // Ale dużo problemów tym rozwiązujesz i nie jest wcale trudniejsze od reszty
   checkAnswer() {
     this.toArray = this.selectedValues.toString();
     if (
@@ -48,6 +53,8 @@ export class QuestionMultiComponent implements OnInit {
     }
     this.isDisabled = !this.isDisabled;
   }
+
+  // NBA puste metody aj aj aj
 
   constructor() {}
 

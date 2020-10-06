@@ -1,7 +1,9 @@
-import { Component, OnInit, Input } from "@angular/core";
-import questions from "../questions.json";
-import { Router } from "@angular/router";
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
+import questions from '../questions.json';
+
+// NBA da sie ten interfejs zrobic lepiej
 export interface Question {
   subjectId: string;
   type: string;
@@ -41,6 +43,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   getMark() {
+    // NBA Na sline zrobione, a gdyby egzamin mial 54 pytania to bys od 4/54 juz dawal zaliczenie?
     switch (this.points) {
       case 0:
         this.mark = "Niedostateczny (1)";
@@ -93,6 +96,10 @@ export class QuestionsComponent implements OnInit {
   }
 
   ngOnInit() {
+    // NBA Pytania pytaniami ale tutaj powinno byc bardziej EXAMS.JSON i egzaminy wraz z linkami do obrazka nazwa i pytaniami w srodku
+    // Bardziej tak to wyglada w realnym systemie bo nie masz przeciez na sztywno egzaminow tylko mozna je dodawac tworzyc pytania itd
+    // Ogolnie brakuje mi takiego cruda, te pytania moglbys ladowac po prostu z JSONA do storage i tam modifikowac w sensie dodawac pytanie
+    // Zmieniac itd ofc by to szlo do kosza przy wylaczeniu
     this.questionsList = (<Question[]>questions).filter(
       (i) => i.subjectId === this.subjectId.toString()
     );

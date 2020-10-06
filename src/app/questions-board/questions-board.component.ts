@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: "app-questions-board",
@@ -7,6 +7,7 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./questions-board.component.scss"],
 })
 export class QuestionsBoardComponent implements OnInit {
+  // NBA Do enuma
   name = localStorage.getItem(`name`);
   surename = localStorage.getItem(`surename`);
   answer: string;
@@ -25,6 +26,7 @@ export class QuestionsBoardComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
+    // tutaj nie potrzebne przypisanie do zmiennej i blad eslinta
     let id = parseInt(this.route.snapshot.paramMap.get("id"));
     this.subjectId = id;
   }
