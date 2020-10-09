@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.scss"],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   // NBA Te pola sa zbedne
   name: string;
   surname: string;
@@ -21,11 +21,8 @@ export class LoginComponent implements OnInit {
     localStorage.setItem(`surname`, `${this.surname}`);
   }
 
-  // NBA jak juz nazywasz po ang to wszedzie bo zaraz ktoś Ci dołoży niemiecki bo mu tak wygodnie xD
-  zaloguj() {
+  logIn() {
     this.route.navigate(["/egzamin"]);
   }
   constructor(private route: Router) {}
-
-  ngOnInit() {}
 }

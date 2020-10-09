@@ -9,9 +9,7 @@ import questions from '../questions.json';
 })
 export class QuestionChoiceComponent implements OnInit {
   @Input() points: number;
-  // NBA Brak typu
-  // NBA public nie potrzebne
-  @Output() public pointsChange = new EventEmitter<number>();
+  @Output() pointsChange: EventEmitter<number> = new EventEmitter<number>();
   // NBA TO do interfejsu wszystko opisuje pytanie
   @Input() correctAnswer: string;
   @Input() question: string;

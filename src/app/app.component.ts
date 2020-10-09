@@ -7,12 +7,5 @@ import { Router } from '@angular/router';
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  // NBA Nie uzywane
-  name = localStorage.getItem(`name`);
-  surname = localStorage.getItem(`surname`);
-
   constructor(private route: Router) {}
-
-  // NBA Zeby ngOnInit dzialalo musisz dac implements OnInit
-  ngOnInit() {}
 }

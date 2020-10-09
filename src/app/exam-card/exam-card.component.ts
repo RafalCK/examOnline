@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: "./exam-card.component.html",
   styleUrls: ["./exam-card.component.scss"],
 })
-export class ExamCardComponent implements OnInit {
+export class ExamCardComponent {
   @Input() header: string;
   @Input() srcImg: string;
   @Input() subject: string;
@@ -18,7 +18,4 @@ export class ExamCardComponent implements OnInit {
     // NBA Nazwa do enuma?
     this.router.navigate(["/egzamin", subject.id]);
   }
-
-  // Pusty OnInit, jest to potrzebne?
-  ngOnInit() {}
 }

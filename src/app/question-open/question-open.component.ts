@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: "app-question-open",
   templateUrl: "./question-open.component.html",
   styleUrls: ["./question-open.component.scss"],
 })
-export class QuestionOpenComponent implements OnInit {
+export class QuestionOpenComponent{
   @Input() correctAnswer: string;
   @Input() points: number;
   @Output() public pointsChange = new EventEmitter<number>();
@@ -32,10 +32,4 @@ export class QuestionOpenComponent implements OnInit {
     }
     this.isDisabled = !this.isDisabled;
   }
-
-  // NBA Puste metody
-
-  constructor() {}
-
-  ngOnInit() {}
 }

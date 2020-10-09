@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import questions from '../questions.json';
 
@@ -7,7 +7,7 @@ import questions from '../questions.json';
   templateUrl: "./question-multi.component.html",
   styleUrls: ["./question-multi.component.scss"],
 })
-export class QuestionMultiComponent implements OnInit {
+export class QuestionMultiComponent{
   selectedValues: string[] = [];
   toArray: string;
   toast: string;
@@ -53,10 +53,4 @@ export class QuestionMultiComponent implements OnInit {
     }
     this.isDisabled = !this.isDisabled;
   }
-
-  // NBA puste metody aj aj aj
-
-  constructor() {}
-
-  ngOnInit() {}
 }
