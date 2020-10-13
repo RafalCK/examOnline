@@ -1,15 +1,20 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+export enum Login {
+  Name = "name",
+  Surname = "surname"
+}
+
 @Component({
   selector: "app-questions-board",
   templateUrl: "./questions-board.component.html",
   styleUrls: ["./questions-board.component.scss"],
 })
 export class QuestionsBoardComponent implements OnInit {
-  // NBA Do enuma
-  name = localStorage.getItem(`name`);
-  surename = localStorage.getItem(`surename`);
+  //NBA do enuma +
+  name = localStorage.getItem(Login.Name);
+  surename = localStorage.getItem(Login.Surname);
   answer: string;
   correctAnswer: string;
   toast: string;

@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { PointsService } from '../points.service';
+import { Points } from '../question-choice/question-choice.component';
 
 import questions from '../questions.json';
 
@@ -6,25 +8,22 @@ import questions from '../questions.json';
   selector: "app-question-multi",
   templateUrl: "./question-multi.component.html",
   styleUrls: ["./question-multi.component.scss"],
+  providers: [ PointsService ]
 })
-export class QuestionMultiComponent{
-  selectedValues: string[] = [];
-  toArray: string;
-  toast: string;
-  isDisabled = false;
+export class QuestionMultiComponent implements Points{
   @Input() points: number;
-  @Output() public pointsChange = new EventEmitter<number>();
+  @Output() pointsChange = new EventEmitter<number>();
   @Input() correctAnswer: string;
   @Input() correctAnswer2: string;
   @Input() question: string;
-  @Input() value1: string;
-  @Input() value2: string;
-  @Input() value3: string;
-  @Input() value4: string;
   @Input() label1: string;
   @Input() label2: string;
   @Input() label3: string;
   @Input() label4: string;
+  selectedValues: string[] = [];
+  toArray: string;
+  toast: string;
+  isDisabled = false;
 
   public questionsList: {
     question: string;

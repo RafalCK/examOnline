@@ -1,13 +1,19 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import questions from '../questions.json';
+
+
+export interface Points {
+  points: number;
+  pointsChange: EventEmitter<number>
+}
 
 @Component({
   selector: "app-question-choice",
   templateUrl: "./question-choice.component.html",
   styleUrls: ["./question-choice.component.scss"],
 })
-export class QuestionChoiceComponent implements OnInit {
+export class QuestionChoiceComponent implements Points {
   @Input() points: number;
   @Output() pointsChange: EventEmitter<number> = new EventEmitter<number>();
   // NBA TO do interfejsu wszystko opisuje pytanie
@@ -17,10 +23,6 @@ export class QuestionChoiceComponent implements OnInit {
   // Bo wtedy masz value[1], value[2]... value[500] po prostu w tym momencie masz mocną korelacje między value i label więc
   // Od razu na myśl przychodzi jedna tablica obiektów { value: string; label: string } i masz jedno pole zamiast 8
   // Pomyśl jak to rozwiązać tak żeby były interfejsy dla każdego typu pytania i to wszystko w jsonie żeby się zgrało
-  @Input() value1: string;
-  @Input() value2: string;
-  @Input() value3: string;
-  @Input() value4: string;
   @Input() label1: string;
   @Input() label2: string;
   @Input() label3: string;
@@ -47,10 +49,4 @@ export class QuestionChoiceComponent implements OnInit {
     }
     this.isDisabled = !this.isDisabled;
   }
-
-  // NBA Puste metody
-
-  constructor() {}
-
-  ngOnInit() {}
 }

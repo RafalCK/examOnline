@@ -1,7 +1,7 @@
 <app-user-info></app-user-info>
 <div class="subject__header"></div>
 <div class="subject__wrapper">
-  <div *ngFor="let subject of subjects">
+  <div *ngFor="let subject of subjectsList">
     <app-exam-card
       header="{{ subject.name }}"
       srcImg="{{ subject.img }}"

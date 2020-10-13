@@ -21,6 +21,7 @@ import { QuestionMultiComponent } from "./question-multi/question-multi.componen
 import { QuestionsBoardComponent } from "./questions-board/questions-board.component";
 import { ExamComponent } from "./exam/exam.component";
 import { UserInfoComponent } from "./user-info/user-info.component";
+import { PointsService } from './points.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import { UserInfoComponent } from "./user-info/user-info.component";
     FormsModule,
     PanelModule,
   ],
-  providers: [],
+  providers: [ PointsService ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
